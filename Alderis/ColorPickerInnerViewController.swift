@@ -27,7 +27,7 @@ internal class ColorPickerInnerViewController: UIViewController {
 	let configuration: ColorPickerConfiguration
 	var color: Color
 
-	var tab: ColorPickerTab {
+	var tabItem: ColorPickerTab {
 		get { configuration.visibleTabs[currentTab] }
 		set { currentTab = configuration.visibleTabs.firstIndex(of: newValue) ?? 0 }
 	}
@@ -299,7 +299,7 @@ internal class ColorPickerInnerViewController: UIViewController {
 		}
 
 		colorDidChange()
-		tab = configuration.initialTab
+		tabItem = configuration.initialTab
 		tabsView?.selectedSegmentIndex = currentTab
 	}
 
